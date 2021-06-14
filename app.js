@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$(function (){
 	$.ajax({
 		type: 'GET',
-		url: 'https://api.jsonbin.io/v3/b/60c0cfc79fc30168f1cae176',
+		url: 'https://api.jsonbin.io/v3/b/60c0cfc79fc30168f1cae176/1',
 		headers:{
     			"X-Master-Key":"$2b$10$UQHXlckxYv/6Ox617tJzWeJbIMis2xSjnSIMEaE3hFNPXxkGe538q"
 		},
@@ -22,6 +22,7 @@ $(document).ready(function(){
 			function busca_curso(){
 				curso_data = '';
 				var user_input = $("#inputlg").val();
+				var user_input = user_input.toLowerCase();
 				var aux = 0;
 				for(let k in cursos_faculdades){
 				if(cursos_faculdades[k].nome.toLowerCase().indexOf(user_input, 0) > -1){
